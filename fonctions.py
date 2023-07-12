@@ -29,7 +29,7 @@ def voirSignaux(ondes):
     ax.set_ylim(-2.2,2.2)
     ax.ticklabel_format(style='scientific',axis='x',scilimits=(0,0))
     display(fig)
-    
+    plt.plot()
 def entendreLeSon(y):
     '''
     Cette fonction permet d'entendre le son
