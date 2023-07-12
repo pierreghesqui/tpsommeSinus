@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from IPython.display import Audio,display,clear_output
 import time
-
+from cv2 import waitKey
 def voirSignaux(ondes):
     
     fig = plt.figure()
@@ -47,7 +47,7 @@ def entendreLeSon(y):
         display(Audio(y, rate=fe,autoplay=True))
     else:
         display(Audio(y, rate=fe,autoplay=True,normalize=False))
-    time.sleep(duration_s+1)
+    waitKey(int((duration_s+1)*1000))
     
     return 1
  
