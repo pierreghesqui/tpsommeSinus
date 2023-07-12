@@ -11,11 +11,13 @@ def voirSignaux(ondes):
         onde = ondes[i]
         retard = max(retard,onde.retard)
         
-    plt.text(5.1/ondes[0].frequence,1,"retard = "+str(round(retard,2))+' s',size=12,
+    plt.text(0,2.1,"retard = "+str(round(retard,2))+' s',size=12,
         bbox =dict(boxstyle="round",ec=("k"),fc=("c")))
     for i in range(nbondes):
         plt.plot(ondes[i].temps,ondes[i].signal,couleurs[i], label = labels[i])
-    
+        if i != nbondes-1:
+            legen =  plt.legend()
+            legen.remove()
     plt.legend(loc= 'upper right')
     plt.title("Y = sin(2$\pi$f)")
     plt.xlabel("temps (s)")
