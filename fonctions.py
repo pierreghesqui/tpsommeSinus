@@ -28,7 +28,6 @@ def voirSignaux(ondes):
     ax.set_xlim(0,5*1/ondes[0].frequence)
     ax.set_ylim(-2.2,2.2)
     ax.ticklabel_format(style='scientific',axis='x',scilimits=(0,0))
-    display(fig)
     plt.show()
 def entendreLeSon(y):
     '''
