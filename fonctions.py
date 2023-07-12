@@ -1,8 +1,11 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from IPython.display import Audio,display
+from IPython.display import Audio,display,clear_output
 
 def voirSignaux(ondes):
+    
+    fig = plt.figure()
+    ax = fig.add_subplot(1, 1, 1)
     nbondes = np.shape(ondes)[0]
     retard =0
     couleurs =["b-","g-","m-"]
@@ -10,22 +13,22 @@ def voirSignaux(ondes):
     for i in range(nbondes):
         onde = ondes[i]
         retard = max(retard,onde.retard)
-    plt.text(0,2.1,"retard = "+str(round(retard,6))+' s',size=12,
+    ax.text(0,2.1,"retard = "+str(round(retard,6))+' s',size=12,
         bbox =dict(boxstyle="round",ec=("k"),fc=("c")))
     for i in range(nbondes):
         plt.plot(ondes[i].temps,ondes[i].signal,couleurs[i], label = labels[i])
         if i != nbondes-1:
-            legen =  plt.legend()
+            legen =  ax.legend()
             legen.remove()
-    plt.legend(loc= 'upper right')
-    plt.title("Y = sin(2$\pi$f)")
-    plt.xlabel("temps (s)")
-    plt.ylabel("Amplitude")
-    plt.grid(True)
-    plt.xlim(0,5*1/ondes[0].frequence)
-    plt.ylim(-2.2,2.2)
-    plt.ticklabel_format(style='scientific',axis='x',scilimits=(0,0))
-    plt.show()
+    ax.legend(loc= 'upper right')
+    ax.set_title("Y = sin(2$\pi$f)")
+    ax.set_xlabel("temps (s)")
+    ax.set_ylabel("Amplitude")
+    ax.grid(True)
+    ax.set_xlim(0,5*1/ondes[0].frequence)
+    ax.set_ylim(-2.2,2.2)
+    ax.ticklabel_format(style='scientific',axis='x',scilimits=(0,0))
+    display(fig)
     
 def entendreLeSon(y):
     '''
