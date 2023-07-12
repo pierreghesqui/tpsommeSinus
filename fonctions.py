@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from IPython.display import Audio,display,clear_output
+import time
 
 def voirSignaux(ondes):
     
@@ -41,12 +42,12 @@ def entendreLeSon(y):
     fe = 1/te
     duration_s = te*(y.shape[0]-1)
     # Play the waveform out the speakers
-    y = y/2.001
+    y = y/4.001
     if np.max(y)>1:
         display(Audio(y, rate=fe,autoplay=True))
     else:
         display(Audio(y, rate=fe,autoplay=True,normalize=False))
-    
+    time.sleep(duration_s+1)
     
     return 1
  
