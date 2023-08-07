@@ -12,7 +12,7 @@ def voirSignaux(ondes):
     for i in range(nbondes):
         onde = ondes[i]
         retard = max(retard,onde.retard)
-    ax.text(0,2.1,"retard = "+str(round(retard,6))+' s',size=12,
+    ax.text(1,2,"retard = "+str(round(retard,6))+' s',size=12,
         bbox =dict(boxstyle="round",ec=("k"),fc=("c")))
     for i in range(nbondes):
         plt.plot(ondes[i].temps,ondes[i].signal,couleurs[i], label = labels[i])
