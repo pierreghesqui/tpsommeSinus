@@ -20,7 +20,7 @@ def voirSignaux(ondes):
             legen =  ax.legend()
             legen.remove()
     ax.legend(loc= 'upper right')
-    ax.set_title("Y = sin(2$\pi$f)")
+    ax.set_title("Ondes enregistrées au point M")
     ax.set_xlabel("temps (s)")
     ax.set_ylabel("Amplitude")
     ax.grid(True)
