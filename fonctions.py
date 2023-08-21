@@ -8,7 +8,7 @@ def voirSignaux(ondes):
     nbondes = np.shape(ondes)[0]
     retard =0
     couleurs =["b-","g-","m-"]
-    labels = ["onde1 ", "onde2 ", "ondetotale "]
+    labels = ["onde1 ", "onde2 ", "onde1 + onde2 "]
     for i in range(nbondes):
         onde = ondes[i]
         retard = max(retard,onde.retard)
