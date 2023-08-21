@@ -1,2 +1,6 @@
-lien : https://notebook.basthon.fr/?from=https://raw.githubusercontent.com/pierreghesqui/tpsommeSinus/main/TP%20Somme%20Sinus.ipynb&module=https://raw.githubusercontent.com/pierreghesqui/tpsommeSinus/main/fonctions.py&module=https://raw.githubusercontent.com/pierreghesqui/tpsommeSinus/main/onde.py
-liencourt : https://tinyurl.com/termtpsinu
+
+lienEleve : https://notebook.basthon.fr/?from=https://raw.githubusercontent.com/pierreghesqui/tpsommeSinus/main/TP%20Somme%20Sinus.ipynb&module=https://raw.githubusercontent.com/pierreghesqui/tpsommeSinus/main/fonctions.py&module=https://raw.githubusercontent.com/pierreghesqui/tpsommeSinus/main/onde.py
+liencourtEleve : https://tinyurl.com/termtpsinu
+
+lienProf : https://notebook.basthon.fr/?from=https://raw.githubusercontent.com/pierreghesqui/tpsommeSinus/main/TP%20Somme%20Sinus-Prof.ipynb&module=https://raw.githubusercontent.com/pierreghesqui/tpsommeSinus/main/fonctions.py&module=https://raw.githubusercontent.com/pierreghesqui/tpsommeSinus/main/onde.py
+liencourtProf : https://tinyurl.com/termtpsinuprof 
